@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "author": "Letícia Gonçalves",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -70.45,
+      "left": 368.35,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 92.4, "left": 224.6, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 44.4,
+      "left": 224.6,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -3.6,
+      "left": 224.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res1",
+      "top": 32.75,
+      "left": 278.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res2",
+      "top": 80.75,
+      "left": 278.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "res3",
+      "top": 128.75,
+      "left": 278.4,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP11", "res1:2", "green", [ "h-19.2", "v-38.4" ] ],
+    [ "pico:GP12", "res2:2", "green", [ "h0" ] ],
+    [ "pico:GP13", "res3:2", "green", [ "h-19.2", "v38.44" ] ],
+    [ "res2:1", "led2:A", "green", [ "h-9.6", "v9.6" ] ],
+    [ "res1:1", "led3:A", "green", [ "v0" ] ],
+    [ "res3:1", "led1:A", "green", [ "v0" ] ],
+    [ "pico:GND.2", "led3:C", "limegreen", [ "h-38.4", "v-28.8", "h-115.2", "v57.6" ] ],
+    [ "led2:C", "pico:GND.2", "yellow", [ "h-18.8", "v-105.6", "h105.6", "v28.8" ] ],
+    [ "led1:C", "pico:GND.2", "magenta", [ "h-18.8", "v-153.6", "h96", "v28.8" ] ]
+  ],
+  "dependencies": {}
+}
