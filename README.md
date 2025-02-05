@@ -50,8 +50,8 @@ O projeto consiste na implementação de um **semáforo** utilizando o **Raspber
 2. **Clonar o Repositório:**
 
 ```bash
-git clone https://github.com/Ltiicia/SemaforoTemporizado.git
-cd SemaforoTemporizado
+git clone https://github.com/Ltiicia/Temporizador_Periodico.git
+cd Temporizador_Periodico
 ```
 
 3. **Compilar e Enviar o Código:**
